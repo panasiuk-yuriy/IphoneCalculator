@@ -1,0 +1,38 @@
+@import '../styles/general.scss';
+
+.numbers {
+  grid-area: numbers;
+  display: flex;
+  flex-wrap: wrap;
+  width: $width-button * 4;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  &__item {
+    margin: $margin-button;
+    border-radius: 50%;
+    height: $width-button;
+    width: $width-button;
+    font-size: 26px;
+    color: white;
+    background-color: rgb(59, 55, 47);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: slategrey;
+    }
+
+    &--active {
+      background-color: red;
+    }
+
+    &--zero {
+      border-radius: 0;
+      width: $width-button * 2;
+      border-radius: 30px ;
+    }
+  }
+}
